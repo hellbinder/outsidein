@@ -1,0 +1,14 @@
+== Outside in application
+
+This is a test app using cucumber and rspec for testing. This is a very simple approach yet it hepled me understand a couple of things.
+
+
+== Overview
+
+Just one thing that I almost forgot. <tt>It's on the rails page anyways</tt>
+When using a partial, you can send the instance variable and it will be included in that partial.
+
+For ex. render partial:@models
+
+will call a _model partial with each model already.
+

@@ -1,0 +1,7 @@
+%h1 New book
+= form_for @book do |f|
+  = f.label :name, "Name"
+  = f.text_field :name
+  = f.submit "Create", disable_with: 'Creating...'
+
+
