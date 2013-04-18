@@ -6,6 +6,7 @@ gem 'rails', '3.2.13'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+gem 'zeus'
 
 
 # Gems used only for assets and not required
@@ -26,13 +27,20 @@ gem 'haml-rails'
 group :test do
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
+  gem 'launchy'
 end
 
 group :development, :test do
   gem "rspec-rails", "~> 2.0"
+  gem "faker"
+  gem "factory_girl_rails"
+  gem 'meta_request'
 end
 
-  gem 'zeus'
+group :development do
+  gem "better_errors"
+  gem "binding_of_caller"
+end
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

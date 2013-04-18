@@ -1,0 +1,8 @@
+%h1= @library.name
+
+= form_for @library, :url => { :action => "add_book" } do |f| 
+  = select_tag(:book_id, options_from_collection_for_select(Book.where('id not in (?)', @library.books.empty? ? '': @library.books), :id, :name))
+  = f.submit "Add Book"
+%hr
+= link_to "Go back to library info", @library
+  

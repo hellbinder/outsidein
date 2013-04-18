@@ -1,0 +1,9 @@
+%h1 Books for #{@library.name} built in #{@library.built_date}
+%h2 Books in this library
+%ul
+-@books.each do |b|
+  %li= b.name
+
+= link_to("Add book to library", add_library_book_path(@library))
+%hr
+= link_to "Back to library list", libraries_path
